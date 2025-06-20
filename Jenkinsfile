@@ -15,7 +15,7 @@ pipeline{
     }
     stage("Checkout Projek") {
       steps{
-        git url: 'https://github.com/bertoale/env.git', branch: 'main'
+        git url: 'https://github.com/bertoale/10-adservice.git', branch: 'main'
       }
     }
     stage("Build Image Adservice"){

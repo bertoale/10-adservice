@@ -15,7 +15,7 @@ pipeline{
     }
     stage("Checkout Projek") {
       steps{
-        git branch: "main", url: "http://localhost:1024/albertxp/10-adservice.git"
+        git branch: "main", url: "https://github.com/albertxp/10-adservice.git"
       }
     }
     stage("Build Image Adservice"){

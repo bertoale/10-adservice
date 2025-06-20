@@ -20,7 +20,7 @@ pipeline{
     }
     stage("Build Image Adservice"){
       steps{
-        sh "docker build -t ${IMAGE_PREFIX}-adservice:testing ."
+        sh "docker build -t ${IMAGE_PREFIX}-adservice:latest ."
       }
     }
     stage("Push Image adservice ke Dokcerhub (Production)"){

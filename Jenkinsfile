@@ -15,7 +15,7 @@ pipeline{
     }
     stage("Checkout Projek") {
       steps{
-        git branch: "main", url: "https://github.com/albertxp/10-adservice.git", credentialsId: ''
+        git url: 'https://github.com/bertoale/env.git', branch: 'main'
       }
     }
     stage("Build Image Adservice"){

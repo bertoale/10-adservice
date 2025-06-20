@@ -15,7 +15,7 @@ pipeline{
     }
     stage("Checkout Projek") {
       steps{
-        git branch: "main", url: "https://github.com/albertxp/10-adservice.git"
+        git branch: "main", url: "https://github.com/albertxp/10-adservice.git", credentialsId: ''
       }
     }
     stage("Build Image Adservice"){
@@ -34,7 +34,9 @@ pipeline{
     }
     stage("Deploy ke Production"){
       steps{
-        sh "kubectl apply -f adservice.yaml"
+        sh "
+          kubectl apply -f adservice.yaml
+          "
       }
     }
   }
